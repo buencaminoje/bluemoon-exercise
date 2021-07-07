@@ -27,4 +27,11 @@ b_id INT,
       FOREIGN KEY(b_id) 
 	  REFERENCES books(b_id)
 		  ON DELETE CASCADE
+<<<<<<< Updated upstream
 );
+=======
+);
+
+CREATE UNIQUE INDEX idx_book_arrangement
+	ON book_arrangement(b_id, s_id);
+>>>>>>> Stashed changes
