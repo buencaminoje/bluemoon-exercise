@@ -1,8 +1,8 @@
 CREATE TABLE books (
 b_id SERIAL PRIMARY KEY,
 title VARCHAR(255) NOT NULL,
-description TEXT,
-publish_year DATE
+description TEXT NOT NULL,
+publish_year DATE NOT NULL
 );
 
 CREATE TABLE book_authors (
@@ -18,3 +18,5 @@ CONSTRAINT fk_book_authors_books
 		REFERENCES books(b_id)
 			ON DELETE CASCADE
 );
+CREATE UNIQUE INDEX idx_book_authors
+	ON book_authors(a_id, b_id);
