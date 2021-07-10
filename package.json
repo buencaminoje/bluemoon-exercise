@@ -1,12 +1,10 @@
 {
   "devDependencies": {
     "semistandard": "16.x",
-    "snazzy": "9.x",
-    "tap": "^13.1.11"
+    "snazzy": "9.x"
   },
   "scripts": {
-    "lint": "semistandard --verbose | snazzy",
-    "test": "tap tests/**/*.test.js"
+    "lint": "semistandard --verbose | snazzy"
   },
   "dependencies": {
     "knex": "^0.95.6",
