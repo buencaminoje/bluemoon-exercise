@@ -16,13 +16,10 @@ async function createTable () {
     table.string('pen_name', 50).notNullable();
     table.date('birthdate').notNullable();
   });
-
-  if (response) {
-    knex.destroy();
-  }
 }
 
 createTable()
-  .catch(() => {
+  .catch(() => {})
+  .finally(() => {
     knex.destroy();
-  });
+  })
