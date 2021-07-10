@@ -9,7 +9,7 @@ tap.test('Check Table', t => {
       connection: {
         host: 'localhost',
         user: 'postgres',
-        password: 'root',
+        password: '',
         database: 'library'
       }
     });
@@ -29,6 +29,7 @@ tap.test('Check Table', t => {
     })
     .catch(() => {
       t.notOk('There is a problem with the Postgre Connection!');
+      t.end();
     });
 
   tap.teardown(function () {
