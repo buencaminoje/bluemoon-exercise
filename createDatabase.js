@@ -9,12 +9,10 @@ const knex = require('knex')({
 
 async function createDatabase () {
   const response = await knex.raw('CREATE DATABASE library');
-  if (response) {
-    knex.destroy();
-  }
 }
 
 createDatabase()
-  .catch(response => {
+  .catch(() => {})
+  .finally(response => {
     knex.destroy();
-  });
+  })
