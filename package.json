@@ -1,8 +1,11 @@
 {
   "devDependencies": {
-    "tap": "^13.1.11"
+    "tap": "^13.1.11",
+    "semistandard": "16.x",
+    "snazzy": "9.x"
   },
   "scripts": {
+    "lint": "semistandard --verbose | snazzy",
     "test": "tap tests/**/*.test.js"
   },
   "dependencies": {
@@ -10,3 +13,4 @@
     "pg": "^8.6.0"
   }
 }
+
