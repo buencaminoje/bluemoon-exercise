@@ -62,3 +62,4 @@ server.post('/authors', async (request, reply) => {
 
 // Register fastify-formbody to support www-form-encoded body type
 server.register(require('fastify-formbody'));
+module.exports = server;
