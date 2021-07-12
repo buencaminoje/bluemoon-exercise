@@ -1,14 +1,15 @@
 {
   "devDependencies": {
-    "tap": "^13.1.11",
     "semistandard": "16.x",
-    "snazzy": "9.x"
+    "snazzy": "9.x",
+    "tap": "^13.1.11"
   },
   "scripts": {
     "lint": "semistandard --verbose | snazzy",
     "test": "tap tests/**/*.test.js"
   },
   "dependencies": {
-    "fastify": "^3.19.0"
+    "fastify": "^3.19.0",
+    "request": "^2.88.2"
   }
 }
