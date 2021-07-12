@@ -1,4 +1,4 @@
-const server = require('./app.js');
+const server = require('fastify')({ logger: true });
 
 let authors = [
   {
@@ -62,4 +62,16 @@ server.post('/authors', async (request, reply) => {
 
 // Register fastify-formbody to support www-form-encoded body type
 server.register(require('fastify-formbody'));
+
+const start = async () => {
+  try {
+    await server.listen(3000);
+  } catch (err) {
+    server.log.error(err);
+    process.exit(1);
+  }
+};
+
+start();
+
 module.exports = server;
