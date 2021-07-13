@@ -17,4 +17,4 @@ async function startup () {
   });
 }
 
-startup();
+module.exports = startup();
