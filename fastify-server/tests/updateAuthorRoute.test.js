@@ -7,7 +7,7 @@ app.then(fastify => {
   fastify.listen(0, (errres) => {
     const URL = 'http://localhost:' + APP_PORT + '/authors';
 
-    tap.test('Create Author with Parameters', test => {
+    tap.test('Update Author with Parameters', test => {
       request({
         method: 'PUT',
         url: URL + '/1',
