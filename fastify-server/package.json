@@ -1,0 +1,19 @@
+{
+  "devDependencies": {
+    "semistandard": "16.x",
+    "snazzy": "9.x",
+    "tap": "^13.1.11"
+  },
+  "scripts": {
+    "lint": "semistandard --verbose | snazzy",
+    "test": "tap tests/**/*.test.js"
+  },
+  "dependencies": {
+    "fastify": "^3.19.0",
+    "fastify-formbody": "^5.0.0",
+    "fastify-plugin": "^3.0.0",
+    "knex": "^0.95.6",
+    "pg": "^8.6.0",
+    "request": "^2.88.2"
+  }
+}
