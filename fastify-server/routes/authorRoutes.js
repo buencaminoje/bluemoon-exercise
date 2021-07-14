@@ -29,9 +29,11 @@ const authorRoutes = async (fastify, options) => {
       .catch(er => {
         return { responseMessage: `${ERROR_MESSAGE} updating!` };
       });
-    if (!Object.prototype.hasOwnProperty.call(response, 'responseMessage')) {
+    if (!Object.prototype.hasOwnProperty.call(response, 'responseMessage') && response) {
       response = { responseMessage: `${SUCCESS_MESSAGE} updated!` };
-    }
+    } else {
+        response = { responseMessage: `${ERROR_MESSAGE} updating!. Author may not exists!` };
+      }
     return response;
   });
 };
