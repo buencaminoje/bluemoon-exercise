@@ -7,7 +7,7 @@ const authorRoutes = async (fastify, options) => {
       .catch(er => {
         return { responseMessage: `${ERROR_MESSAGE} adding!` };
       });
-    if (!response.hasOwnProperty('responseMessage')) {
+    if (!Object.prototype.hasOwnProperty.call(response, 'responseMessage')) {
       response = { responseMessage: `${SUCCESS_MESSAGE} added!` };
     }
     return response;
