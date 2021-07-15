@@ -1,5 +1,5 @@
-import '@testing-library/jest-dom/extend-expect'
-import { getAuthors, createAuthor, updateAuthor, deleteAuthor } from '../components/Author/AuthorAPI';
+import '@testing-library/jest-dom/extend-expect';
+import { getAuthors, createAuthor, updateAuthor, deleteAuthor } from '../components/author/AuthorAPI';
 
 test('Check Author API Functions', () => {
   expect(typeof getAuthors === 'function').toBe(true);
