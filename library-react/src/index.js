@@ -1,5 +1,4 @@
 import './index.css';
-import 'antd/dist/antd.css';
 import reportWebVitals from './reportWebVitals';
 import Routes from './Routes';
 
