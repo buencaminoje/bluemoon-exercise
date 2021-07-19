@@ -39,5 +39,3 @@ app.listen(APP_PORT, (err) => {
     process.exit(1);
   }
 });
-
-
