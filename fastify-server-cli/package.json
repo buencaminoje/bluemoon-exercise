@@ -2,7 +2,7 @@
   "name": "Tech-81",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "server.js",
   "directories": {
     "test": "test"
   },
@@ -24,8 +24,7 @@
     "fastify-cors": "^6.0.2",
     "fastify-formbody": "^5.0.0",
     "knex": "^0.95.6",
-    "pg": "^8.6.0",
-    "request": "^2.88.2"
+    "pg": "^8.6.0"
   },
   "devDependencies": {
     "tap": "^15.0.9",
