@@ -24,7 +24,7 @@ function build (t) {
 
   // tear down our app after we are done
   t.teardown(() => {
-    app.close.bind(app)
+    app.close.bind(app);
     app.knex.destroy();
   });
 
