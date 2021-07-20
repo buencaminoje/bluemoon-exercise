@@ -1,5 +1,5 @@
 const config = {
-  // App Port Number
+  // Custom App Port Number
   APP_PORT: '3000',
   // Database Settings
   DB_SQL_CLIENT: 'pg',
