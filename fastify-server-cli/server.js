@@ -26,6 +26,7 @@ const closeListeners = closeWithGrace({ delay: 500 }, async function ({ signal, 
   app.close();
 });
 
+// Add Hook for closing fastify app
 app.addHook('onClose', async (instance, done) => {
   closeListeners.uninstall();
   app.knex.destroy();
